@@ -1,0 +1,262 @@
+body{
+    font-family: 'Dongle';
+    font-size: 1.5em;
+}
+
+/* universal */
+.button-universal{
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-size: inherit;
+    padding: 0 30px
+}
+
+/* navbar */
+nav{
+    position: relative;
+    z-index: 1;
+}
+
+.navbar-brand{
+    font-family: 'Viga', sans-serif;
+    font-size: 32px;
+}
+
+nav a.button-universal{
+    height: 35px;
+}
+
+/* jumbotron */
+.jumbotron{
+    background: url(image/jumbotron2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 540px;
+    text-align: center;
+    position: relative;
+    background-position: 0 -130px;
+    background-attachment: fixed;
+}
+
+.jumbotron::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    bottom: 0;
+}
+
+.jumbotron .container{
+    position: relative;
+    z-index: 1;
+}
+
+.display-4{
+    font-family: 'Viga', sans-serif;
+    color: white;
+    font-size: 1.5em!important;
+    font-weight: normal;
+    text-shadow: 3px 3px 1px rgba(0,0,0,0.7);
+    line-height: 80px;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+.display-4 span{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* content */
+/* info-panel */
+.info-panel{
+    background-color: white;
+    box-shadow: 0 3px 20px rgba(0,0,0,.5);
+    border-radius: 10px;
+    margin-top: -100px;
+    padding: 20px;
+    border: 5px solid #ccc;
+}
+
+.info-panel img{
+    margin-right: 10px;
+}
+
+.info-panel h4{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+    line-height: 20px;
+}
+
+.info-panel p{
+    font-size: .9em;
+    color: #aaa;
+    margin-top: -15px;
+}
+
+/* project */
+.project{
+    margin-top: 120px;
+    text-align: center;
+}
+
+.project img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project h3{
+    font-size: 2.5em;
+    text-transform: uppercase;
+    line-height: 60px;
+    margin-top: 30px;
+}
+
+.project h3 span{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.project p{
+    color: #999;
+    line-height: 20px;
+    margin: 30px 0;
+}
+
+/* gallery */
+.gallery{
+    margin: 100px 0;
+    background-color: #eee;
+    padding: 50px;
+    position: relative;
+}
+
+.gallery h3,
+.testimonial h3{
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.img-thumbnail{
+    margin-bottom: 30px;
+    cursor: pointer;
+    /* transition: 1s; */
+}
+
+/* testimonial */
+.testimonial{
+    margin-top: 100px;
+}
+
+.testimonial h5{
+    font-size: 1em;
+    color: #666;
+    font-style: italic;
+}
+
+.testimonial figure img{
+    width: 60px;
+    opacity: .6;
+    margin: 30px 15px 10px;
+    cursor: pointer;
+}
+.testimonial figure img.active{
+    width: 100px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.testimonial figure figcaption{
+    text-align: center;
+}
+
+figure figcaption h5{
+    text-transform: uppercase;
+    font-style: normal;
+    color: black;
+    font-weight: bold;
+}
+
+figcaption p{
+    font-size: .9em;
+    margin-top: -15px;
+}
+
+/* footer */
+.footer{
+    margin-top: 100px;
+    color: #888;
+    line-height: 70px;
+}
+
+
+
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+    .navbar-brand, .nav-link{
+        color: white!important;
+    }
+
+    .nav-link{
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+
+    .nav-link:hover::after{
+        content: '';
+        display: block;
+        border-bottom: 4px solid #0B36DC;
+        border-radius: 5px;
+        width: 50%;
+        margin: auto;
+        margin-bottom: -4px;
+    }
+
+    a.btn.btn-primary{
+        font-size: inherit;
+    }
+
+    .jumbotron{
+        margin-top: -75px;
+        height: 640px;
+        background-position: 0  -700px;
+    } 
+
+    .display-4{
+        margin-top: 230px;
+        font-size: 2.2em!important;
+        line-height: 100px;
+    }
+    .display-4 span{
+        font-size: 1.1em;
+    }
+
+    .info-panel{
+        margin-top: -60px;
+    }
+
+    .project{
+        text-align: left;
+    }
+
+    .img-thumbnail{
+        width: 30%;
+    }
+
+    .img-thumbnail.active{
+        position: absolute;
+        top: 35%;
+        left: 35%;
+        transform: scale(3);
+    }
+
+    .testimonial h5{
+        font-size: 1.1em;
+    }
+}
